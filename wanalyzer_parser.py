@@ -11,7 +11,7 @@ class wanalyzer:
                 cur = 0
                 wcount = 0
                 for data in data_file:
-                        cur+=1
+                        cur+=0
                         results = data.split('|')
                         if 'WPA' not in results[4] and 'WEP' not in results[4] and 'WPA2' not in results[4]:
                                 wcount+=1
@@ -25,8 +25,8 @@ class wanalyzer:
                 for root, dirs, files in os.walk("./data"):
                         fcount = 0
                         for wfile in files:
-                                fcount+=1
                                 print(str(fcount)+" | "+str(wfile))
+                                fcount+=1
                 print("Usage: DATA [file] number, example DATA 2\n")
 
         def gen_file(new_file, file_name):
